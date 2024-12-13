@@ -115,7 +115,7 @@ export let DATA = {
 				//	icon: Globe
 				//}
 			],
-			image: 'https://private-user-images.githubusercontent.com/189171665/391157274-7304a0ad-7623-4261-ac13-a8c5386249f5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzQxMTkwMDIsIm5iZiI6MTczNDExODcwMiwicGF0aCI6Ii8xODkxNzE2NjUvMzkxMTU3Mjc0LTczMDRhMGFkLTc2MjMtNDI2MS1hYzEzLWE4YzUzODYyNDlmNS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIxM1QxOTM4MjJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jOWYzMWI0MzFkZjQzOTQ0ZGYyNmEwYzBlMzI3YTM1OTJjZDA5ZTk4Y2YxZTZjNTQ4Yjg3YTkxNmYxZWFkYzMwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Zd4l66-qwhsw-y_H-j-RZvSju3iq5FBop9AQyo7PXKI',
+			image: 'https://github.com/user-attachments/assets/7304a0ad-7623-4261-ac13-a8c5386249f5',
 			video: ''
 		},
 	],
