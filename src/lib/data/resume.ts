@@ -7,7 +7,7 @@ import GmailSvg from '$lib/imgs/gmail.svg';
 import GmailDarkSvg from '$lib/imgs/gmail-dark.svg';
 
 import Discord from '$lib/imgs/discord.svg';
-import DiscordDark from '$lib/imgs/Discorddark.svg';
+import DiscordDark from '$lib/imgs/DiscordDark.svg';
 
 import site72 from '$lib/imgs/site72.webp';
 import figma from '$lib/imgs/figma-logo.svg';
