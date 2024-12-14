@@ -1,6 +1,8 @@
 import { fontFamily } from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
+
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 const config = {
 	darkMode: ['class'],
 	content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -56,10 +58,31 @@ const config = {
 			},
 			fontFamily: {
 				sans: ['Inter var', ...fontFamily.sans]
-			}
+			},
+			animation: {
+				"border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+			  },
+			keyframes: {
+				"border-beam": {
+				  "100%": {
+					"offset-distance": "100%",
+				  },
+				},
+			},
 		}
 	},
-	plugins: [require('@tailwindcss/typography')]
+	plugins: [require('@tailwindcss/typography'), addVariablesForColors]
 };
+
+function addVariablesForColors({ addBase, theme }: any) {
+	let allColors = flattenColorPalette(theme("colors"));
+	let newVars = Object.fromEntries(
+	  Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+	);
+  
+	addBase({
+	  ":root": newVars,
+	});
+  }
 
 export default config;

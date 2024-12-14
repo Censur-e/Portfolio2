@@ -1,5 +1,7 @@
 <script>
+	import { onMount } from 'svelte';
 	import BlurFade from '$lib/components/magic/BlurFade.svelte';
+	import TextHoverComp from '$lib/components/magic/TextHoverEffect.svelte';
 	import HackathonCard from '$lib/components/portfolio/HackathonCard.svelte';
 	import ProjectCard from '$lib/components/portfolio/ProjectCard.svelte';
 	import ResumeCard from '$lib/components/portfolio/ResumeCard.svelte';
@@ -8,14 +10,20 @@
 	import { DATA } from '$lib/data/resume';
 	import { marked } from 'marked';
 	let BLUR_FADE_DELAY = 0.04;
+
+	import { Toaster, toast } from 'svelte-sonner'
+
+	onMount(() => {
+		toast.info('Page toujours en Développement');
+	});
 </script>
 
 <style>
 	.non-selectable {
-            user-select: none; /* Pour les navigateurs modernes */
-            -webkit-user-select: none; /* Pour Safari */
-            -moz-user-select: none; /* Pour Firefox */
-            -ms-user-select: none; /* Pour Internet Explorer/Edge */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
 </style>
 
@@ -44,6 +52,12 @@
 </svelte:head>
 <main class="flex min-h-[100dvh] flex-col space-y-10">
 	<section id="hero">
+		<Toaster />
+			<!-- Notification en bas a droite -->
+		<Toaster richColors  />
+		<div class="h-[50rem] flex items-center justify-center">
+			<TextHoverComp text={DATA.pseudo} />
+		  </div>
 		<div class="mx-auto w-full max-w-2xl space-y-8">
 			<div class="flex justify-between gap-2">
 				<div class="flex flex-1 flex-col space-y-1.5 non-selectable">
@@ -141,7 +155,7 @@
 				</div>
 			</BlurFade>
 			<div class="mx-auto grid max-w-[800px] grid-cols-1 gap-3 sm:grid-cols-2">
-				{#each DATA.projects as project, id}
+				{#each DATA.projectsrecent as project, id}
 					<BlurFade delay={BLUR_FADE_DELAY * 1.5 + id * 0.05}>
 						<ProjectCard
 							href={project.href}

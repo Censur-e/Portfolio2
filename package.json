@@ -46,6 +46,7 @@
 		"shiki": "^1.11.2",
 		"svelte-inview": "^4.0.2",
 		"svelte-motion": "^0.12.2",
+		"svelte-sonner": "^0.3.28",
 		"tailwind-merge": "^2.5.5",
 		"tailwind-variants": "^0.2.1"
 	}

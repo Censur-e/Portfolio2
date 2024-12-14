@@ -1,4 +1,4 @@
-import { CodeIcon, HomeIcon, NotebookIcon } from 'lucide-svelte';
+import { CodeIcon, HomeIcon, NotebookIcon, Globe } from 'lucide-svelte';
 // Navbar Icons
 import GithubSvg from '$lib/imgs/github.svg';
 import GithubDarkSvg from '$lib/imgs/github-dark.svg';
@@ -14,6 +14,7 @@ import figma from '$lib/imgs/figma-logo.svg';
 
 // Your resume data
 export let DATA = {
+	pseudo: 'CENSURE',
 	name: 'Censure',
 	initials: 'CE',
 	url: 'https://github.com/Censur-e',
@@ -34,7 +35,18 @@ export let DATA = {
 	navbar: [
 		{ href: '/', icon: HomeIcon, label: 'Home' },
 		{ href: '/blog', icon: NotebookIcon, label: 'Blog' },
-		{ href: '/#projects', icon: CodeIcon, label: 'Projects' }
+		{ href: '/projects', icon: CodeIcon, label: 'Projects' }
+	],
+	posts: [
+		{
+			title: 'Création du Portfolio',
+			date: 'Décembre 2024',
+			content: `Sorti officiel de mon portfolio qui va me permettre d'afficher mon travail en ligne et aux yeux de tout le monde.`,
+			lien: 'https://example.com',
+			auteur: 'Censure',
+			pdp: 'https://avatars.githubusercontent.com/u/189171665?v=4',
+			role: 'Développeur',
+		}
 	],
 	contact: {
 		email: 'hello@example.com',
@@ -96,6 +108,52 @@ export let DATA = {
 			end: 'Actuellement'
 		},
 	],
+	projectsrecent: [
+		// 2 MAX !
+		{
+			title: 'Astral',
+			href: 'https://github.com/Censur-e/Astral',
+			dates: 'Octobre 2024 - Décembre 2024',
+			active: true,
+			description:
+				`Astral est un UI conçue pour l'exploitation dans le jeu Roblox. Cette UI offre des fonctionnalités avancées, permettant aux utilisateurs de profiter de diverses options, telle que la lecture de musique, et bien d'autres encore.`,
+			technologies: [
+				'Luau'
+			],
+			links: [
+				//{
+				//	type: 'Website',
+				//	href: 'https://chatcollect.com',
+				//	// icon: <Icons.globe className="size-3" />,
+				//	icon: Globe
+				//}
+			],
+			image: 'https://github.com/user-attachments/assets/7304a0ad-7623-4261-ac13-a8c5386249f5',
+			video: ''
+		},
+		{
+			title: 'Menu Site-72',
+			href: 'https://github.com/Censur-e/UI-Site-72',
+			dates: 'Décembre 2024 - Décembre 2024',
+			active: true,
+			description:
+				`Pour aider Site-72 je leur est fait un menu pour pouvoir changer celui qu'il avait qui étais pas propre et pas professionnel.`,
+			technologies: [
+				'Luau',
+				'Figma'
+			],
+			links: [
+				{
+					type: 'Discord Site 72',
+					href: 'https://discord.com/invite/KCh3Rx7aJa',
+					// icon: <Icons.globe className="size-3" />,
+					icon: Globe
+				}
+			],
+			image: 'https://github.com/Censur-e/UI-Site-72/blob/main/Main%20UI%20Site%2072.png?raw=true',
+			video: ''
+		},
+	],
 	projects: [
 		{
 			title: 'Astral',
@@ -115,9 +173,52 @@ export let DATA = {
 				//	icon: Globe
 				//}
 			],
-			image: 'https://private-user-images.githubusercontent.com/189171665/391157274-7304a0ad-7623-4261-ac13-a8c5386249f5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzQxMTkwMDIsIm5iZiI6MTczNDExODcwMiwicGF0aCI6Ii8xODkxNzE2NjUvMzkxMTU3Mjc0LTczMDRhMGFkLTc2MjMtNDI2MS1hYzEzLWE4YzUzODYyNDlmNS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIxM1QxOTM4MjJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jOWYzMWI0MzFkZjQzOTQ0ZGYyNmEwYzBlMzI3YTM1OTJjZDA5ZTk4Y2YxZTZjNTQ4Yjg3YTkxNmYxZWFkYzMwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Zd4l66-qwhsw-y_H-j-RZvSju3iq5FBop9AQyo7PXKI',
+			image: 'https://github.com/user-attachments/assets/7304a0ad-7623-4261-ac13-a8c5386249f5',
 			video: ''
 		},
+		{
+			title: 'Menu Site-72',
+			href: 'https://github.com/Censur-e/UI-Site-72',
+			dates: 'Décembre 2024 - Décembre 2024',
+			active: true,
+			description:
+				`Pour aider Site-72 je leur est fait un menu pour pouvoir changer celui qu'il avait qui étais pas propre et pas professionnel.`,
+			technologies: [
+				'Luau',
+				'Figma'
+			],
+			links: [
+				{
+					type: 'Discord Site 72',
+					href: 'https://discord.com/invite/KCh3Rx7aJa',
+					// icon: <Icons.globe className="size-3" />,
+					icon: Globe
+				}
+			],
+			image: 'https://github.com/Censur-e/UI-Site-72/blob/main/Main%20UI%20Site%2072.png?raw=true',
+			video: ''
+		},
+		{
+			title: 'Tablette UI',
+			href: 'https://github.com/Censur-e/TabletteUI',
+			dates: 'Décembre 2024 - Décembre 2024',
+			active: true,
+			description:
+				`Ceci est un UI de Team et aussi un UI pour des teams seulement, on peut se team avec et l'utiliser pour voir ses collègues , radio etc`,
+			technologies: [
+				'Luau'
+			],
+			//links: [
+			//	{
+			//		type: 'Discord Site 72',
+			//		href: 'https://discord.com/invite/KCh3Rx7aJa',
+			//		// icon: <Icons.globe className="size-3" />,
+			//		icon: Globe
+			//	}
+			//],
+			image: '',
+			video: ''
+		}
 	],
 	hackathons: [
 		//{

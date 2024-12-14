@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { formatDate } from '$lib/utils';
 	import BlurFade from '$lib/components/magic/BlurFade.svelte';
+	import BlogCard from '$lib/components/portfolio/BlogCard.svelte';
+	import { DATA } from '$lib/data/resume';
 
-	export let data;
 	let BLUR_FADE_DELAY = 0.04;
-	
 </script>
 
 <svelte:head>
@@ -12,26 +11,25 @@
 </svelte:head>
 
 <BlurFade delay={BLUR_FADE_DELAY}>
-	<h1 class="mb-8 text-2xl font-medium tracking-tighter">Blog</h1>
+	<h1 class="mb-8 text-2xl font-medium tracking-tighter">Tout les Posts</h1>
 </BlurFade>
 <!-- Posts -->
-<section>
-	<ul class="posts">
-		{#each data.posts as post, id}
-			<li class="post">
-				<BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05}>
-					<a class="mb-4 flex flex-col space-y-1" href="/blog/{post.slug}">
-						<div class="flex w-full flex-col">
-							<p class="tracking-tight">{post.title}</p>
-							<p class="h-6 text-xs text-muted-foreground">
-								{formatDate(post.date)}
-							</p>
-						</div>
-					</a>
-				</BlurFade>
-			</li>
+<section class="post">
+	<div>
+		{#each DATA.posts as blog, id}
+			<BlurFade delay={BLUR_FADE_DELAY * 1.5 + id * 0.05}>
+				<BlogCard 
+					title={blog.title}
+					date={blog.date}
+					description={blog.content}
+					lien={blog.lien}
+					auteur={blog.auteur}
+					role={blog.role}
+					pdp={blog.pdp}
+				/>
+			</BlurFade>
 		{/each}
-	</ul>
+	</div>
 </section>
 
 <style>
