@@ -89,7 +89,7 @@ export let DATA = {
 			href: 'https://discord.com/invite/KCh3Rx7aJa',
 			badges: [],
 			location: 'Remote',
-			title: 'Rôle : UIDesigner',
+			title: 'Rôle : UIDesigner ( Pas Officiel )',
 			logoUrl: site72,
 			start: 'Décembre 2024',
 			end: 'indéfinit',
