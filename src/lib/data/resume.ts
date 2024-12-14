@@ -42,7 +42,7 @@ export let DATA = {
 			title: 'Création du Portfolio',
 			date: 'Décembre 2024',
 			content: `Sorti officiel de mon portfolio qui va me permettre d'afficher mon travail en ligne et aux yeux de tout le monde.`,
-			lien: 'https://example.com',
+			lien: '',
 			auteur: 'Censure',
 			pdp: 'https://avatars.githubusercontent.com/u/189171665?v=4',
 			role: 'Développeur',
