@@ -94,7 +94,7 @@
 	<section id="work">
 		<div class="flex min-h-0 flex-col gap-y-3">
 			<BlurFade delay={BLUR_FADE_DELAY}>
-				<h2 class="text-xl font-bold non-selectable">Expérience</h2>
+				<h2 class="text-xl font-bold non-selectable">Mes Expérience</h2>
 			</BlurFade>
 			{#each DATA.work as work, id}
 				<BlurFade delay={BLUR_FADE_DELAY * 1.2 + id * 0.05}>
@@ -106,7 +106,7 @@
 	<section id="education">
 		<div class="flex min-h-0 flex-col gap-y-3">
 			<BlurFade delay={BLUR_FADE_DELAY}>
-				<h2 class="text-xl font-bold non-selectable">Outils</h2>
+				<h2 class="text-xl font-bold non-selectable">Mes Outils</h2>
 			</BlurFade>
 			{#each DATA.education as edu, id}
 				<BlurFade delay={BLUR_FADE_DELAY * 1.2 + id * 0.05}>
